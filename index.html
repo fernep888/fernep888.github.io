@@ -1,0 +1,67 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Paket</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #pesan {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="tampilkanPesan()">Buka Paket</button>
+
+    <div id="pesan">
+        🌃 <strong>Selamat Malam Paket</strong> 🌃<br>
+     <br><br>  Mau menyampaikan pesan kak 🤭 <br> 
+     Gimana harimu hari ini kak? 
+     <br> kata kakaknya yang ngirim 
+     <br> Walaupun setiap hari capek Semangat ya kak 😉 
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            document.getElementById("pesan").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
