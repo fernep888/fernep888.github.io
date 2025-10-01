@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Ucapan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 30px;
+      max-width: 400px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .card h1 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .message {
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .btn {
+      background: #ff6f61;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e65b50;
+    }
+
+    .video-container {
+      margin-top: 15px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      display: none; /* video disembunyikan awalnya */
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Tombol untuk buka ucapan -->
+    <button class="btn" onclick="bukaUcapan()">🎁 Buka Ucapan</button>
+
+    <!-- Isi ucapan -->
+    <div class="message" id="ucapan">
+      <img src="https://i.ibb.co/2y6fw5f/happy-birthday.jpg" alt="Ucapan Selamat">
+      <h1>Selamat Ulang Tahun 🎂</h1>
+      <p>Semoga panjang umur, sehat selalu, dan sukses dalam segala hal.  
+      Hari ini adalah hari spesialmu, rayakan dengan penuh kebahagiaan!</p>
+
+      <!-- Tombol Play Video -->
+      <div class="video-container">
+        <button class="btn" onclick="putarVideo()">▶ Putar Video</button>
+        <video id="videoUcapan" controls>
+          <source src="video1.mp4" type="video/mp4">
+          Browser kamu tidak mendukung video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function bukaUcapan() {
+      document.querySelector(".btn").style.display = "none";
+      document.getElementById("ucapan").style.display = "block";
+    }
+
+    function putarVideo() {
+      let video = document.getElementById("videoUcapan");
+      video.style.display = "block"; // tampilkan video
+      video.play(); // langsung play
+    }
+  </script>
+</body>
+</html>
