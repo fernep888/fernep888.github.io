@@ -2,37 +2,28 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Kartu Ucapan</title>
+  <title>Ucapan dengan Video</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f0f0f0;
-      padding: 50px;
-    }
+    body { font-family: Arial; text-align: center; margin: 50px; }
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       max-width: 400px;
       margin: auto;
     }
-    .btn {
-      background: #ff4081;
+    button {
+      background: #2196f3;
       color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 8px;
+      padding: 10px 20px;
       font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
-      margin-top: 15px;
-    }
-    .btn:hover {
-      background: #e73370;
     }
     video {
-      margin-top: 20px;
+      margin-top: 15px;
       width: 100%;
       border-radius: 10px;
       display: none;
@@ -41,9 +32,9 @@
 </head>
 <body>
   <div class="card">
-    <h2>Selamat Ulang Tahun 🎉</h2>
-    <p>Semoga panjang umur, sehat selalu, dan sukses!</p>
-    <button class="btn" onclick="playVideo()">▶ Putar Video</button>
+    <h2>🎉 Selamat Ulang Tahun 🎉</h2>
+    <p>Semoga panjang umur dan sehat selalu!</p>
+    <button onclick="playVideo()">▶ Putar Video</button>
     <video id="videoUcapan" controls>
       <source src="https://drive.google.com/uc?export=download&id=1FSnLQVYe7yD8spuDE4JOPOKf0lZcVrQN" type="video/mp4">
       Browser Anda tidak mendukung video.
@@ -53,7 +44,7 @@
   <script>
     function playVideo() {
       const vid = document.getElementById('videoUcapan');
-      vid.style.display = "block"; 
+      vid.style.display = "block";
       vid.play();
     }
   </script>
